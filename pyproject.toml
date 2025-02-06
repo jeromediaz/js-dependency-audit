@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-data]
+"pkgname" = ["py.typed"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project]
+name = "js-dependency-audit"
+version = "0.0.1"
+authors = [
+  { name="Jérôme DIAZ", email="jerome_diaz@me.com" },
+]
+description = "A python library to check for vulnerabilities in yarn.lock files."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+keywords = ["js", "npm", "security", "yarn"]
+dependencies = [
+    "pyarn>=0.3.0",
+    "requests>=2.32.3"
+]
+
+[project.optional-dependencies]
+dev = ["black", "pip-tools", "pytests"]
+
+[project.urls]
+"Homepage" = "https://github.com/jeromediaz/js-dependency-audit"
+"Bug Tracker" = "https://github.com/jeromediaz/js-dependency-audit/issues"
