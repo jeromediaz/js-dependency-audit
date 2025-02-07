@@ -1,8 +1,8 @@
 # JS-DEPENDENCY-AUDIT
 
-[![PyPI - License](https://img.shields.io/pypi/l/js_dependency_audit)](https://pypi.org/project/js-dependency-audit/)
+[![PyPI - License](https://img.shields.io/pypi/l/js-dependency-audit)](https://pypi.org/project/js-dependency-audit/)
 [![PyPI - Python Version](https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2Fjeromediaz%2Fjs-dependency-audit%2Frefs%2Fheads%2Fmain%2Fpyproject.toml)](https://pypi.org/project/js_dependency_audit/)
-[![PyPI - Version](https://img.shields.io/pypi/v/js_dependency_audit)](https://pypi.org/project/js-dependency-audit/)
+[![PyPI - Version](https://img.shields.io/pypi/v/js-dependency-audit)](https://pypi.org/project/js-dependency-audit/)
 
 A library to help perform a security audit check using a yarn (v1) lock file.
 
