@@ -13,6 +13,7 @@ class Cvss(BaseModel):
     score: float
     vectorString: Optional[str]
 
+
 class Advisory(BaseModel):
     findings: List[Finding]
     found_by: Optional[str]

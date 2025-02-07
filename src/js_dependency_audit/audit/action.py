@@ -16,5 +16,5 @@ class Action(BaseModel):
     action: str
     resolves: List[Resolve]
     module: str
-    target: str
+    target: Optional[str] = None
     depth: Optional[int] = None

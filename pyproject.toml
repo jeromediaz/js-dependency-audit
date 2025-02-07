@@ -40,3 +40,6 @@ dev = ["black", "pip-tools", "pytests"]
 [project.urls]
 "Homepage" = "https://github.com/jeromediaz/js-dependency-audit"
 "Bug Tracker" = "https://github.com/jeromediaz/js-dependency-audit/issues"
+
+[tool.mypy]
+mypy_path = "$MYPY_CONFIG_FILE_DIR/stubs"

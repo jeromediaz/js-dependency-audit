@@ -9,22 +9,13 @@ if TYPE_CHECKING:
 def request_security_audit(lock_file_content: "LockFileContent") -> Audit:
     import requests
 
-    try:
-        response = requests.post(
-            url="https://registry.npmjs.org/-/npm/v1/security/audits",
-            headers={
-                "Content-Type": "application/json; charset=utf-8"
-            },
-            data=lock_file_content.as_json()
-        )
+    response = requests.post(
+        url="https://registry.npmjs.org/-/npm/v1/security/audits",
+        headers={"Content-Type": "application/json; charset=utf-8"},
+        data=lock_file_content.as_security_audit_payload(),
+    )
 
-        print('Response HTTP Status Code: {status_code}'.format(
-            status_code=response.status_code))
-        print('Response HTTP Response Body: {content}'.format(
-            content=response.content))
+    if response.status_code != 200:
+        raise ValueError(f"Got status code {response.status_code}, expected 200")
 
-        return Audit.model_validate_json(response.content.decode('utf-8'))
-
-    except requests.exceptions.RequestException:
-        print('HTTP Request failed')
-
+    return Audit.model_validate_json(response.content.decode("utf-8"))

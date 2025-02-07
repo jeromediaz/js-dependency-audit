@@ -8,6 +8,7 @@ class Vulnerabilities(BaseModel):
     high: int
     critical: int
 
+
 class Metadata(BaseModel):
     vulnerabilities: Vulnerabilities
     dependencies: int
